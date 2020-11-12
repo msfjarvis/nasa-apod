@@ -59,6 +59,7 @@ dependencies {
   kapt(Dependencies.AndroidX.Hilt.daggerCompiler)
   kapt(Dependencies.AndroidX.Hilt.daggerHiltCompiler)
   compileOnly(Dependencies.AndroidX.annotation)
+  implementation(project(":network"))
   implementation(Dependencies.AndroidX.activity_ktx)
   implementation(Dependencies.AndroidX.appcompat)
   implementation(Dependencies.AndroidX.constraint_layout)
@@ -72,6 +73,10 @@ dependencies {
 
   implementation(Dependencies.Kotlin.Coroutines.android)
   implementation(Dependencies.Kotlin.Coroutines.core)
+  implementation(Dependencies.Kotlin.Ktor.clientJson)
+  implementation(Dependencies.Kotlin.Ktor.clientOkHttp)
+  implementation(Dependencies.Kotlin.Ktor.clientSerialization)
+  implementation(Dependencies.Kotlin.Serialization.json)
 
   implementation(Dependencies.AndroidX.Hilt.dagger)
   implementation(Dependencies.AndroidX.Hilt.hiltLifecycleViewmodel)
