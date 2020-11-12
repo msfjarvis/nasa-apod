@@ -7,9 +7,9 @@ plugins {
 
 dependencies {
   implementation(Dependencies.Kotlin.Ktor.clientCore)
-  implementation(Dependencies.Kotlin.Ktor.clientJson)
-  implementation(Dependencies.Kotlin.Ktor.clientOkHttp)
-  implementation(Dependencies.Kotlin.Ktor.clientSerialization)
+  implementation(Dependencies.Kotlin.Serialization.json)
   testImplementation(Dependencies.Testing.junit)
   testImplementation(Dependencies.Kotlin.Ktor.clientTest)
+  testImplementation(Dependencies.Kotlin.Ktor.clientJson)
+  testImplementation(Dependencies.Kotlin.Ktor.clientSerialization)
 }
