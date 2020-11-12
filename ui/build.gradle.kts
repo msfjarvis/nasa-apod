@@ -3,7 +3,9 @@ import java.util.Properties
 plugins {
   id("com.android.application")
   kotlin("android")
+  kotlin("kapt")
   kotlin("plugin.serialization") version "1.4.10"
+  id("dagger.hilt.android.plugin")
   `apod-plugin`
 }
 
@@ -54,6 +56,8 @@ android {
 }
 
 dependencies {
+  kapt(Dependencies.AndroidX.Hilt.daggerCompiler)
+  kapt(Dependencies.AndroidX.Hilt.daggerHiltCompiler)
   compileOnly(Dependencies.AndroidX.annotation)
   implementation(Dependencies.AndroidX.activity_ktx)
   implementation(Dependencies.AndroidX.appcompat)
@@ -69,6 +73,8 @@ dependencies {
   implementation(Dependencies.Kotlin.Coroutines.android)
   implementation(Dependencies.Kotlin.Coroutines.core)
 
+  implementation(Dependencies.AndroidX.Hilt.dagger)
+  implementation(Dependencies.AndroidX.Hilt.hiltLifecycleViewmodel)
   implementation(Dependencies.ThirdParty.plumber)
   implementation(Dependencies.ThirdParty.timber)
   implementation(Dependencies.ThirdParty.timberkt)

@@ -4,6 +4,8 @@
  */
 
 private const val KOTLIN_VERSION = "1.4.10"
+private const val ANDROIDX_HILT_VERSION = "1.0.0-alpha02"
+private const val DAGGER_HILT_VERSION = "2.29.1-alpha"
 
 object Dependencies {
   object Kotlin {
@@ -47,6 +49,15 @@ object Dependencies {
       "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     const val material = "com.google.android.material:material:1.3.0-alpha03"
     const val recycler_view = "androidx.recyclerview:recyclerview:1.2.0-alpha06"
+
+    object Hilt {
+      const val dagger = "com.google.dagger:hilt-android:$DAGGER_HILT_VERSION"
+      const val daggerCompiler = "com.google.dagger:hilt-compiler:$DAGGER_HILT_VERSION"
+      const val daggerHiltCompiler = "androidx.hilt:hilt-compiler:$ANDROIDX_HILT_VERSION"
+      const val hiltLifecycleViewmodel =
+        "androidx.hilt:hilt-lifecycle-viewmodel:$ANDROIDX_HILT_VERSION"
+    }
+
   }
 
   object ThirdParty {

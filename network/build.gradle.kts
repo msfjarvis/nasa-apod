@@ -6,6 +6,7 @@ plugins {
 }
 
 dependencies {
+  implementation(Dependencies.AndroidX.Hilt.dagger)
   implementation(Dependencies.Kotlin.Ktor.clientCore)
   implementation(Dependencies.Kotlin.Serialization.json)
   testImplementation(Dependencies.Testing.junit)

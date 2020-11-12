@@ -12,6 +12,7 @@ buildscript {
   dependencies {
     classpath(build.getValue("androidGradlePlugin"))
     classpath(build.getValue("kotlinGradlePlugin"))
+    classpath(build.getValue("daggerGradlePlugin"))
   }
 }
 
