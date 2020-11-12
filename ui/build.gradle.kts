@@ -85,7 +85,6 @@ dependencies {
   implementation(Dependencies.ThirdParty.timberkt)
 
   debugImplementation(Dependencies.ThirdParty.leakcanary)
-  debugImplementation(Dependencies.ThirdParty.whatthestack)
 
   // Testing-only dependencies
   androidTestImplementation(Dependencies.Testing.junit)
