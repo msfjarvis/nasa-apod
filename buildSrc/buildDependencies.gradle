@@ -1,0 +1,9 @@
+rootProject.ext.versions = [
+  agp   : '4.2.0-alpha16',
+  kotlin: '1.4.10',
+]
+
+rootProject.ext.build = [
+  androidGradlePlugin: "com.android.tools.build:gradle:${versions.agp}",
+  kotlinGradlePlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+]
