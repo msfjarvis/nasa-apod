@@ -25,10 +25,8 @@ class MainFragment : Fragment(R.layout.main_fragment) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     lifecycleScope.launchWhenCreated {
       viewModel.images.collect { images ->
-        if (images.isNotEmpty()) {
-          withContext(Dispatchers.Main) {
-            binding.message.text = images[0].explanation
-          }
+        withContext(Dispatchers.Main) {
+          binding.message.text = images[0].explanation
         }
       }
     }
