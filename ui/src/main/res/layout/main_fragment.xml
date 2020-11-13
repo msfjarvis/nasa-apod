@@ -7,14 +7,15 @@
   android:layout_height="match_parent"
   tools:context=".ui.main.MainFragment">
 
-  <TextView
-    android:id="@+id/message"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="MainFragment"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/apod_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:fastScrollEnabled="false"
+    tools:itemCount="4"
+    tools:orientation="vertical"
+    tools:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+    tools:listitem="@layout/apod_item"
+    tools:spanCount="2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

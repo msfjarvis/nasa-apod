@@ -63,6 +63,7 @@ object Dependencies {
 
   object ThirdParty {
 
+    const val coil = "io.coil-kt:coil:1.0.0"
     const val leakcanary = "com.squareup.leakcanary:leakcanary-android:2.5"
     const val plumber = "com.squareup.leakcanary:plumber-android:2.5"
     const val timber = "com.jakewharton.timber:timber:4.7.1"
