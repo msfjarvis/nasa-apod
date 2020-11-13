@@ -83,6 +83,7 @@ dependencies {
   implementation(Dependencies.ThirdParty.plumber)
   implementation(Dependencies.ThirdParty.timber)
   implementation(Dependencies.ThirdParty.timberkt)
+  coreLibraryDesugaring(Dependencies.AndroidX.coreLibraryDesugaring)
 
   debugImplementation(Dependencies.ThirdParty.leakcanary)
 

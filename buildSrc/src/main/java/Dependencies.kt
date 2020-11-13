@@ -49,6 +49,7 @@ object Dependencies {
       "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     const val material = "com.google.android.material:material:1.3.0-alpha03"
     const val recycler_view = "androidx.recyclerview:recyclerview:1.2.0-alpha06"
+    const val coreLibraryDesugaring = "com.android.tools:desugar_jdk_libs:1.0.10"
 
     object Hilt {
       const val dagger = "com.google.dagger:hilt-android:$DAGGER_HILT_VERSION"
