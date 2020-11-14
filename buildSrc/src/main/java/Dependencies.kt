@@ -16,16 +16,6 @@ object Dependencies {
       const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$COROUTINES_VERSION"
     }
 
-    object Ktor {
-
-      private const val version = "1.4.1"
-      const val clientCore = "io.ktor:ktor-client-core:$version"
-      const val clientJson = "io.ktor:ktor-client-json:$version"
-      const val clientSerialization = "io.ktor:ktor-client-serialization:$version"
-      const val clientOkHttp = "io.ktor:ktor-client-okhttp:$version"
-      const val clientTest = "io.ktor:ktor-client-mock:$version"
-    }
-
     object Serialization {
 
       private const val version = "1.0.1"
