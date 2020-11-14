@@ -4,6 +4,7 @@
  */
 
 private const val KOTLIN_VERSION = "1.4.10"
+private const val COROUTINES_VERSION = "1.4.1"
 private const val ANDROIDX_HILT_VERSION = "1.0.0-alpha02"
 private const val DAGGER_HILT_VERSION = "2.29.1-alpha"
 
@@ -11,9 +12,8 @@ object Dependencies {
   object Kotlin {
     object Coroutines {
 
-      private const val version = "1.4.1"
-      const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
-      const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
+      const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$COROUTINES_VERSION"
+      const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$COROUTINES_VERSION"
     }
 
     object Ktor {
@@ -68,13 +68,14 @@ object Dependencies {
     const val plumber = "com.squareup.leakcanary:plumber-android:2.5"
     const val timber = "com.jakewharton.timber:timber:4.7.1"
     const val timberkt = "com.github.ajalt:timberkt:1.5.1"
-    const val whatthestack = "com.github.haroldadmin:WhatTheStack:0.2.0"
   }
 
   object Testing {
 
+    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$COROUTINES_VERSION"
     const val junit = "junit:junit:4.13.1"
     const val kotlin_test_junit = "org.jetbrains.kotlin:kotlin-test-junit:$KOTLIN_VERSION"
+    const val turbine = "app.cash.turbine:turbine:0.2.1"
 
     object AndroidX {
 

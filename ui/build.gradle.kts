@@ -95,6 +95,8 @@ dependencies {
   androidTestImplementation(Dependencies.Testing.AndroidX.rules)
   androidTestImplementation(Dependencies.Testing.AndroidX.junit_ext)
 
+  testImplementation(Dependencies.Testing.coroutines)
   testImplementation(Dependencies.Testing.junit)
   testImplementation(Dependencies.Testing.kotlin_test_junit)
+  testImplementation(Dependencies.Testing.turbine)
 }
