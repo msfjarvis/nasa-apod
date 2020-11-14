@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import dev.msfjarvis.apod.R
@@ -17,20 +18,17 @@ class MainFragment : Fragment(R.layout.main_fragment) {
   private val viewModel: MainViewModel by activityViewModels()
   private val binding by viewBinding(MainFragmentBinding::bind)
 
-  companion object {
-    fun newInstance() = MainFragment()
-  }
-
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    val adapter = ApodImagesAdapter(arrayListOf())
+    val navController = findNavController()
+    val adapter = ApodImagesAdapter(arrayListOf()) { detail ->
+      navController.navigate(MainFragmentDirections.toDetailFragment(detail))
+    }
     val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
     binding.apodRecyclerView.layoutManager = layoutManager
     binding.apodRecyclerView.adapter = adapter
     lifecycleScope.launchWhenCreated {
       viewModel.images.collect { images ->
-        if (images.isNotEmpty()) {
-          adapter.addItems(images)
-        }
+        adapter.addItems(images)
       }
     }
   }
