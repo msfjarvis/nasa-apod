@@ -19,4 +19,4 @@ data class PictureDetail(
   val serviceVersion: String,
   val title: String,
   val url: String,
-)
+): java.io.Serializable
