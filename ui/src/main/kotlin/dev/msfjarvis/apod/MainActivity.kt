@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.commitNow
 import dagger.hilt.android.AndroidEntryPoint
+import dev.msfjarvis.apod.ui.detail.DetailFragment
 import dev.msfjarvis.apod.ui.main.MainFragment
 
 @AndroidEntryPoint
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.main_activity)
     if (savedInstanceState == null) {
       supportFragmentManager.commitNow {
-        replace(R.id.container, MainFragment.newInstance())
+        replace(R.id.container, DetailFragment.newInstance())
       }
     }
   }
