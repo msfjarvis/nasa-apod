@@ -65,9 +65,13 @@ object Dependencies {
 
     const val coil = "io.coil-kt:coil:1.0.0"
     const val leakcanary = "com.squareup.leakcanary:leakcanary-android:2.5"
+    const val moshi = "com.squareup.moshi:moshi:1.11.0"
+    const val moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:1.11.0"
     const val plumber = "com.squareup.leakcanary:plumber-android:2.5"
     const val timber = "com.jakewharton.timber:timber:4.7.1"
     const val timberkt = "com.github.ajalt:timberkt:1.5.1"
+    const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
+    const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:2.9.0"
   }
 
   object Testing {
@@ -75,6 +79,7 @@ object Dependencies {
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$COROUTINES_VERSION"
     const val junit = "junit:junit:4.13.1"
     const val kotlin_test_junit = "org.jetbrains.kotlin:kotlin-test-junit:$KOTLIN_VERSION"
+    const val mockWebServer = "com.squareup.okhttp3:mockwebserver:3.14.9"
     const val turbine = "app.cash.turbine:turbine:0.2.1"
 
     object AndroidX {

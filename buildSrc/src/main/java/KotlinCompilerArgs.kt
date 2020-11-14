@@ -4,5 +4,6 @@
  */
 
 internal val additionalCompilerArgs = listOf(
-  "-Xopt-in=kotlin.RequiresOptIn"
+  "-Xopt-in=kotlin.RequiresOptIn",
+  "-Xopt-in=kotlinx.serialization.ExperimentalSerializationApi"
 )
