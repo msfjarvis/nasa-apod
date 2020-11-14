@@ -9,6 +9,9 @@
     kotlinx.serialization.KSerializer serializer(...);
 }
 
+-if public class ** implements java.io.Serializable
+-keep public class <1> { *; }
+
 # Inline-based optimizations cause reflection to fail within Ktor (from what I can tell), so we turn
 # this off for now.
 -dontoptimize
