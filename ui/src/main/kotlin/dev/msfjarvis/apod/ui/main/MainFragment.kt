@@ -28,7 +28,9 @@ class MainFragment : Fragment(R.layout.main_fragment) {
     binding.apodRecyclerView.adapter = adapter
     lifecycleScope.launchWhenCreated {
       viewModel.images.collect { images ->
-        adapter.addItems(images)
+        if (images.isNotEmpty()) {
+          adapter.addItems(images)
+        }
       }
     }
   }
