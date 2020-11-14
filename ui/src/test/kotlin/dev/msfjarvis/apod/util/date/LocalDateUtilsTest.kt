@@ -26,31 +26,13 @@ class LocalDateUtilsTest {
 
   @Test
   fun `comparison finds older picture to be smaller`() {
-    val secondPicture = PictureDetail(
-      copyright = null,
-      date = "2021-12-01",
-      explanation = "This is a test image",
-      hdUrl = "https://example.com",
-      mediaType = "image",
-      serviceVersion = "v1",
-      title = "Test image",
-      url = "https://example.com",
-    )
+    val secondPicture = firstPicture.copy(date = "2021-12-01")
     assertEquals(-1, PictureDetailComparator.compare(firstPicture, secondPicture))
   }
 
   @Test
   fun `comparison finds newer picture to be larger`() {
-    val secondPicture = PictureDetail(
-      copyright = null,
-      date = "2018-12-01",
-      explanation = "This is a test image",
-      hdUrl = "https://example.com",
-      mediaType = "image",
-      serviceVersion = "v1",
-      title = "Test image",
-      url = "https://example.com",
-    )
+    val secondPicture = firstPicture.copy(date = "2018-12-01")
     assertEquals(1, PictureDetailComparator.compare(firstPicture, secondPicture))
   }
 
