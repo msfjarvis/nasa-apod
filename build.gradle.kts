@@ -13,6 +13,7 @@ buildscript {
     classpath(build.getValue("androidGradlePlugin"))
     classpath(build.getValue("kotlinGradlePlugin"))
     classpath(build.getValue("daggerGradlePlugin"))
+    classpath(build.getValue("navigationSafeArgsPlugin"))
   }
 }
 

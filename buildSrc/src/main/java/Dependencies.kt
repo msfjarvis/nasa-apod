@@ -7,6 +7,7 @@ private const val KOTLIN_VERSION = "1.4.10"
 private const val COROUTINES_VERSION = "1.4.1"
 private const val ANDROIDX_HILT_VERSION = "1.0.0-alpha02"
 private const val DAGGER_HILT_VERSION = "2.29.1-alpha"
+private const val NAVIGATION_VERSION = "2.3.1"
 
 object Dependencies {
   object Kotlin {
@@ -38,6 +39,8 @@ object Dependencies {
     const val lifecycle_viewmodel_ktx =
       "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     const val material = "com.google.android.material:material:1.3.0-alpha03"
+    const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:$NAVIGATION_VERSION"
+    const val navigationUiKtx = "androidx.navigation:navigation-fragment-ktx:$NAVIGATION_VERSION"
     const val recycler_view = "androidx.recyclerview:recyclerview:1.2.0-alpha06"
     const val coreLibraryDesugaring = "com.android.tools:desugar_jdk_libs:1.0.10"
 
@@ -79,6 +82,7 @@ object Dependencies {
       const val runner = "androidx.test:runner:$version"
       const val rules = "androidx.test:rules:$version"
       const val junit_ext = "androidx.test.ext:junit-ktx:$ext_version"
+      const val navigation = "androidx.navigation:navigation-testing:$NAVIGATION_VERSION"
     }
   }
 }

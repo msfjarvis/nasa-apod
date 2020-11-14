@@ -4,6 +4,7 @@ plugins {
   kotlin("kapt")
   kotlin("plugin.serialization") version "1.4.10"
   id("dagger.hilt.android.plugin")
+  id("androidx.navigation.safeargs.kotlin")
   `apod-plugin`
 }
 
@@ -35,6 +36,8 @@ dependencies {
   implementation(Dependencies.AndroidX.lifecycle_livedata_ktx)
   implementation(Dependencies.AndroidX.lifecycle_viewmodel_ktx)
   implementation(Dependencies.AndroidX.material)
+  implementation(Dependencies.AndroidX.navigationFragmentKtx)
+  implementation(Dependencies.AndroidX.navigationUiKtx)
   implementation(Dependencies.AndroidX.recycler_view)
 
   implementation(Dependencies.Kotlin.Coroutines.android)
@@ -60,6 +63,7 @@ dependencies {
   androidTestImplementation(Dependencies.Testing.AndroidX.runner)
   androidTestImplementation(Dependencies.Testing.AndroidX.rules)
   androidTestImplementation(Dependencies.Testing.AndroidX.junit_ext)
+  androidTestImplementation(Dependencies.Testing.AndroidX.navigation)
 
   testImplementation(Dependencies.Testing.coroutines)
   testImplementation(Dependencies.Testing.junit)
