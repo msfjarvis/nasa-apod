@@ -51,8 +51,6 @@ dependencies {
   implementation(Dependencies.ThirdParty.plumber)
   implementation(Dependencies.ThirdParty.timber)
   implementation(Dependencies.ThirdParty.timberkt)
-  implementation(Dependencies.ThirdParty.retrofit)
-  implementation(Dependencies.ThirdParty.retrofitMoshi)
   coreLibraryDesugaring(Dependencies.AndroidX.coreLibraryDesugaring)
 
   debugImplementation(Dependencies.ThirdParty.leakcanary)
@@ -68,6 +66,4 @@ dependencies {
   testImplementation(Dependencies.Testing.coroutines)
   testImplementation(Dependencies.Testing.junit)
   testImplementation(Dependencies.Testing.kotlin_test_junit)
-  testImplementation(Dependencies.Testing.mockWebServer)
-  testImplementation(Dependencies.Testing.turbine)
 }
