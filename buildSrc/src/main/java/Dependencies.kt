@@ -42,6 +42,7 @@ object Dependencies {
     const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:$NAVIGATION_VERSION"
     const val navigationUiKtx = "androidx.navigation:navigation-fragment-ktx:$NAVIGATION_VERSION"
     const val recycler_view = "androidx.recyclerview:recyclerview:1.2.0-alpha06"
+    const val viewPager = "androidx.viewpager2:viewpager2:1.1.0-alpha01"
     const val coreLibraryDesugaring = "com.android.tools:desugar_jdk_libs:1.0.10"
 
     object Hilt {

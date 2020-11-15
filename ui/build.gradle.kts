@@ -39,6 +39,7 @@ dependencies {
   implementation(Dependencies.AndroidX.navigationFragmentKtx)
   implementation(Dependencies.AndroidX.navigationUiKtx)
   implementation(Dependencies.AndroidX.recycler_view)
+  implementation(Dependencies.AndroidX.viewPager)
 
   implementation(Dependencies.Kotlin.Coroutines.android)
   implementation(Dependencies.Kotlin.Coroutines.core)

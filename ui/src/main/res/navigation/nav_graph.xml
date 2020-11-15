@@ -24,7 +24,7 @@
     android:label="DetailFragment"
     tools:layout="@layout/detail_fragment">
     <argument
-      android:name="pictureDetail"
-      app:argType="dev.msfjarvis.apod.data.model.PictureDetail" />
+      android:name="position"
+      app:argType="integer" />
   </fragment>
 </navigation>

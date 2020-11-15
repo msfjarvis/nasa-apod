@@ -18,8 +18,8 @@ class MainFragment : Fragment(R.layout.main_fragment) {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     val navController = findNavController()
-    val adapter = ApodImagesAdapter(viewModel.images) { detail ->
-      navController.navigate(MainFragmentDirections.toDetailFragment(detail))
+    val adapter = ApodImagesAdapter(viewModel.images) { position ->
+      navController.navigate(MainFragmentDirections.toDetailFragment(position))
     }
     val layoutManager = GridLayoutManager(requireContext(), 2)
     binding.apodRecyclerView.layoutManager = layoutManager

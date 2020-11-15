@@ -10,7 +10,7 @@ import dev.msfjarvis.apod.databinding.ApodItemBinding
 
 class ApodImagesAdapter(
   private val items: List<PictureDetail>,
-  private val onClick: (PictureDetail) -> Unit,
+  private val onClick: (Int) -> Unit,
 ) : RecyclerView.Adapter<ApodImagesAdapter.ViewHolder>() {
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -19,20 +19,20 @@ class ApodImagesAdapter(
   }
 
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-    holder.bind(items[position])
+    holder.bind(position, items[position])
   }
 
   class ViewHolder(
     private val binding: ApodItemBinding,
-    private val onClick: (PictureDetail) -> Unit,
+    private val onClick: (Int) -> Unit,
   ) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(pictureDetail: PictureDetail) {
+    fun bind(position: Int, pictureDetail: PictureDetail) {
       binding.thumbnail.load(pictureDetail.url) {
         placeholder(R.drawable.placeholder)
         crossfade(true)
       }
       binding.thumbnail.setOnClickListener {
-        onClick(pictureDetail)
+        onClick(position)
       }
     }
   }
