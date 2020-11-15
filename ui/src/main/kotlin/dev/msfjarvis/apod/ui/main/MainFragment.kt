@@ -4,14 +4,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import dev.msfjarvis.apod.R
 import dev.msfjarvis.apod.databinding.MainFragmentBinding
 import dev.msfjarvis.apod.util.fragment.viewBinding
-import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class MainFragment : Fragment(R.layout.main_fragment) {
@@ -20,16 +18,11 @@ class MainFragment : Fragment(R.layout.main_fragment) {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     val navController = findNavController()
-    val adapter = ApodImagesAdapter(arrayListOf()) { detail ->
+    val adapter = ApodImagesAdapter(viewModel.images) { detail ->
       navController.navigate(MainFragmentDirections.toDetailFragment(detail))
     }
     val layoutManager = GridLayoutManager(requireContext(), 2)
     binding.apodRecyclerView.layoutManager = layoutManager
     binding.apodRecyclerView.adapter = adapter
-    lifecycleScope.launchWhenCreated {
-      viewModel.images.collect { images ->
-        adapter.addItems(images)
-      }
-    }
   }
 }

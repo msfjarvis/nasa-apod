@@ -9,15 +9,9 @@ import dev.msfjarvis.apod.data.model.PictureDetail
 import dev.msfjarvis.apod.databinding.ApodItemBinding
 
 class ApodImagesAdapter(
-  private val items: ArrayList<PictureDetail>,
+  private val items: List<PictureDetail>,
   private val onClick: (PictureDetail) -> Unit,
 ) : RecyclerView.Adapter<ApodImagesAdapter.ViewHolder>() {
-
-  fun addItems(items: List<PictureDetail>) {
-    if (items.isEmpty()) return
-    this.items.addAll(items)
-    notifyDataSetChanged()
-  }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
     val binding = ApodItemBinding.inflate(LayoutInflater.from(parent.context))
