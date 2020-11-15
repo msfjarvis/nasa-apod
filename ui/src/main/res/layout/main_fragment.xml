@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/main"
@@ -12,10 +12,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:fastScrollEnabled="false"
-    tools:itemCount="4"
-    tools:orientation="vertical"
-    tools:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+    tools:itemCount="20"
+    tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
     tools:listitem="@layout/apod_item"
+    tools:orientation="vertical"
     tools:spanCount="2" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
