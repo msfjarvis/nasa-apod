@@ -11,16 +11,18 @@ import dev.msfjarvis.apod.R
 import dev.msfjarvis.apod.databinding.DetailFragmentBinding
 import dev.msfjarvis.apod.ui.main.MainViewModel
 import dev.msfjarvis.apod.util.fragment.viewBinding
+import kotlin.math.abs
 
 @AndroidEntryPoint
 class DetailFragment : Fragment(R.layout.detail_fragment) {
 
+  private val animate = false
   private val viewModel: MainViewModel by activityViewModels()
   private val binding by viewBinding(DetailFragmentBinding::bind)
   private val args: DetailFragmentArgs by navArgs()
-  private val animator = ViewPager2.PageTransformer { page, _ ->
+  private val animator = ViewPager2.PageTransformer { page, position ->
     page.apply {
-      translationY = 0f
+      translationY = if (animate) abs(position) * 500f else 0f
       translationX = 0f
       scaleX = 1f
       scaleY = 1f
