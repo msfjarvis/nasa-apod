@@ -40,6 +40,7 @@ class PictureDetailAdapter(
           detailCopyright.isVisible = true
           detailCopyright.text = "© ${picture.copyright}"
         }
+        detailDate.text = picture.date
         detailTitle.text = picture.title
         detailExplanation.text = picture.explanation
       }
