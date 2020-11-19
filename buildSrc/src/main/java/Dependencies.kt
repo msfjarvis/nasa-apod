@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: GPL-3.0-only
  */
 
-private const val KOTLIN_VERSION = "1.4.10"
+private const val KOTLIN_VERSION = "1.4.20"
 private const val COROUTINES_VERSION = "1.4.1"
 private const val ANDROIDX_HILT_VERSION = "1.0.0-alpha02"
 private const val DAGGER_HILT_VERSION = "2.29.1-alpha"

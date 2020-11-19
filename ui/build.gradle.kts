@@ -2,7 +2,7 @@ plugins {
   id("com.android.application")
   kotlin("android")
   kotlin("kapt")
-  kotlin("plugin.serialization") version "1.4.10"
+  kotlin("plugin.serialization") version "1.4.20"
   id("dagger.hilt.android.plugin")
   id("androidx.navigation.safeargs.kotlin")
   `apod-plugin`
