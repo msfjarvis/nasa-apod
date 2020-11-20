@@ -14,6 +14,9 @@ android {
     versionCode = 1_00_00
     versionName = "1.0.0-alpha01"
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    javaCompileOptions.annotationProcessorOptions {
+      argument("room.schemaLocation", "${projectDir}/schemas")
+    }
   }
 
   lintOptions {
@@ -26,6 +29,7 @@ dependencies {
   kapt(Dependencies.AndroidX.Hilt.daggerCompiler)
   kapt(Dependencies.AndroidX.Hilt.daggerHiltCompiler)
   kapt(Dependencies.ThirdParty.moshiKotlinCodegen)
+  kapt(Dependencies.AndroidX.Room.compiler)
   compileOnly(Dependencies.AndroidX.annotation)
   implementation(Dependencies.AndroidX.activity_ktx)
   implementation(Dependencies.AndroidX.appcompat)
@@ -40,6 +44,7 @@ dependencies {
   implementation(Dependencies.AndroidX.navigationUiKtx)
   implementation(Dependencies.AndroidX.recycler_view)
   implementation(Dependencies.AndroidX.viewPager)
+  implementation(Dependencies.AndroidX.Room.ktx)
 
   implementation(Dependencies.Kotlin.Coroutines.android)
   implementation(Dependencies.Kotlin.Coroutines.core)

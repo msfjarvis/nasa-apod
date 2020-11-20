@@ -53,6 +53,13 @@ object Dependencies {
         "androidx.hilt:hilt-lifecycle-viewmodel:$ANDROIDX_HILT_VERSION"
     }
 
+    object Room {
+
+      private const val version = "2.3.0-alpha03"
+      const val ktx = "androidx.room:room-ktx:$version"
+      const val compiler = "androidx.room:room-compiler:$version"
+    }
+
   }
 
   object ThirdParty {
